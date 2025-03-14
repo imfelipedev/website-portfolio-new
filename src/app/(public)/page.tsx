@@ -42,13 +42,13 @@ const TIMELINE = [
         date: "2023",
         title: "Primeiro emprego",
         description:
-            "Fui contratado pela CherryCodes como desenvolvedor full-stack júnior, onde tive a oportunidade de trabalhar em projetos desafiadores e aprender na prática como planejar e desenvolver softwares de qualidade e altamente escaláveis.",
+            "Fui contratado pela empresa *** como desenvolvedor full-stack, onde tive a oportunidade de trabalhar em projetos desafiadores e aprender na prática como planejar e desenvolver softwares de qualidade e altamente escaláveis.",
     },
     {
         date: "2024",
         title: "Entrada na faculdade",
         description:
-            "Iniciei minha graduação em Análise e Desenvolvimento de Sistemas na Universidade Paulista, onde estou aprofundando meus conhecimentos em áreas como arquitetura de software, banco de dados e desenvolvimento ágil.",
+            "Iniciei minha graduação em Análise e Desenvolvimento de Sistemas, onde estou aprofundando meus conhecimentos em áreas como arquitetura de software, banco de dados e desenvolvimento ágil.",
     },
 ];
 
