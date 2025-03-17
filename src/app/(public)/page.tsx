@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import Image from "next/image";
+
 import { Github, Linkedin, Mail } from "lucide-react";
 
 import Card from "@/app/components/card";
@@ -84,7 +86,7 @@ export default function Home() {
         <>
             <section id="home" className="px-10 w-full min-h-[100dvh] flex items-center justify-center relative">
                 <div className="max-w-[70.0rem] flex flex-col items-center justify-center">
-                    <div className="w-[9.2rem] h-[9.2rem] rounded-full bg-[#f1f1f1]"></div>
+                    <Image src="/avatar.jpeg" alt="avatar" width={92} height={92} quality={100} />
 
                     <p className="mt-10 text-center text-[3.0rem] font-semibold sm:text-[3.6rem]">Felipe Augusto</p>
 
