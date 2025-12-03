@@ -409,10 +409,6 @@ export default function Home() {
                             >
                                 {isDark ? <Sun size={16} color="currentColor" /> : <Moon size={16} color="currentColor" />}
                             </button>
-
-                            <button className="group p-3 rounded-lg border border-border hover:border-muted-foreground/50 transition-all duration-300">
-                                <MessageCircleMore size={16} color="currentColor" />
-                            </button>
                         </div>
                     </div>
                 </footer>
