@@ -1,44 +1,78 @@
 @import "tailwindcss";
 
+:root {
+    --background: oklch(98.463% 0.00181 249.248);
+    --foreground: oklch(20.762% 0.03587 257.705);
+    --card: oklch(100% 0.00011 271.152);
+    --card-foreground: oklch(20.762% 0.03587 257.705);
+    --secondary: oklch(96.696% 0.00298 264.792);
+    --secondary-foreground: oklch(20.762% 0.03587 257.705);
+    --muted: oklch(96.696% 0.00298 264.792);
+    --muted-foreground: oklch(54.936% 0.0278 259.832);
+    --border: oklch(96.996% 0.00298 264.793);
+    --input: oklch(92.191% 0.0001 271.152);
+    --ring: oklch(70.9% 0.00008 271.152);
+    --radius: 0.625rem;
+}
+
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
+.dark {
+    --background: oklch(12.913% 0.00263 285.952);
+    --foreground: oklch(96.115% 0.00011 271.152);
+    --card: oklch(17.348% 0.00206 286.048);
+    --card-foreground: oklch(88.033% 0.00553 286.023);
+    --primary: oklch(0.985 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(17.348% 0.00206 286.048);
+    --secondary-foreground: oklch(88.033% 0.00553 286.023);
+    --muted: oklch(23.201% 0.00574 285.885);
+    --muted-foreground: oklch(63.052% 0.00613 274.879);
+    --border: oklch(20.548% 0.00395 285.968);
+    --input: oklch(0.269 0 0);
+    --ring: oklch(0.439 0 0);
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+    body {
+        @apply bg-background text-foreground;
     }
 }
 
 @layer utilities {
-    @keyframes bounce-slow {
-        0%,
-        100% {
-            transform: translateY(-200%);
-            opacity: 1;
-        }
-        50% {
-            transform: translateY(200%);
+    .animate-fade-in-up {
+        animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes fade-in-up {
+        from {
             opacity: 0;
+            transform: translateY(24px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
-
-    .animate-bounce-slow {
-        animation: bounce-slow 1.5s infinite ease-in-out;
-    }
-}
-
-body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
 }
