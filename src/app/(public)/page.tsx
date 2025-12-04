@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-import { ArrowRight, MessageCircleMore, Moon, Sun } from "lucide-react";
+import { ArrowRight, Moon, Sun } from "lucide-react";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
